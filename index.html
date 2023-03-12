@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-[#141414] box-border m-0 p-0">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>My first project</title>
+  <!--tailwind cdn-->
+  <script src="https://cdn.tailwindcss.com"></script>
+   <!-- <link rel="stylesheet" href="./style.css">  -->
+   
+   <style>
+    /** after:content-[''] after:absolute after:top-0 after:left-0 after:w-full after:h-full after:z-1 after:bg-black/60 after:shadow-[0_120px_100px_250px_rgb(0,0,0),0_-120px_-100px_250px_rgb(0,0,0)]*/
+    body{font-family: 'Arial', sans-serif;}
+    header{background: url('./img/background.jpg') no-repeat center center/cover;}
+    header::after{	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	background: rgba(0, 0, 0, 0.6);
+	box-shadow: inset 120px 100px 250px #000000, inset -120px -100px 250px #000000;}
+  .show {
+	display: block !important;
+	opacity: 1 !important;
+	transition: all 1000 ease-in;
+  }
+.tab-border{border-bottom: #e50914 4px solid;}
+   </style>
+   <script src="https://kit.fontawesome.com/95b264af2d.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-black text-[#999]">
+  <!--헤더s-->
+  <header class="block w-full h-[100vh] relative">            
+    <div class="relative z-10 h-24">
+      <img class="absolute w-44 top-1/2 left-1/2 translate-y-[-50%] translate-x-[-50%]" src="./img/logo.png" alt=""/>
+      <a href="./signIn.html" class="absolute top-1/2 right-0 translate-y-[-50%]
+       translate-x-[-50%] rounded-md inline-block bg-[#e50914]
+        text-white py-[0.4rem] px-[1.3rem] text-base mr-2
+      hover:opacity-90  hover:duration-200
+        ">Sign In</a>
+    </div>
+    <div class="relative z-10 w-[65%] m-auto flex flex-col justify-center items-center text-center mt-36 top-[-25rem] lg:top-0">
+      <h1 class="text-8xl mb-12  font-bold text-white invisible lg:visible">See what's next</h1>
+      <p class="text-white font-normal uppercase text-[1.9rem] lg:leading-[1.25rem]">Watch anywhere. Cancel Anytime</p>
+      <a href="#" class="mt-12 inline-block uppercase bg-[#e50914] rounded-sm shadow-sm mr-2 text-center
+        text-white py-[1.5rem] px-[2.1rem] text-[2rem] hover:opacity-80  hover:duration-200"
+        >Watch Free For 30 Days <i class="fas fa-chevron-right btn-icon"></i
+      ></a>
+    </div>  
+  </header>
+  <!--헤더e-->
+  <!--tabs s-->
+  <section class="bg-[#141414] pt-4 border-b-4 border-b-[#3d3d3d]">
+    <div class="grid grid-cols-1 md:grid-cols-3  gap-4 items-center justify-center text-center max-w-[70%] m-auto overflow-hidden px-8">
+      <div id="tab-1" class="tab-item tab-border py-[1.5rem] hover:text-white cursor-pointer">
+        <i class="fas fa-door-open fa-3x"></i>
+        <p class="text-[1.2rem] pt-2">Cancel at any time</p>
+      </div>
+      <div id="tab-2" class="tab-item py-[1.5rem] hover:text-white cursor-pointer" >
+        <i class="fas fa-tablet-alt fa-3x"></i>
+        <p class="text-[1.2rem] pt-2">Watch anywhere</p>
+      </div>
+      <div id="tab-3" class="tab-item py-[1.5rem] hover:text-white cursor-pointer">
+        <i class="fas fa-tags fa-3x"></i>
+        <p class="text-[1.2rem] pt-2">Pick your price</p>
+      </div>
+    </div>
+  </section>
+  <!--tabs e-->
+  <section class="py-12 bg-black text-white">
+    <div class="max-w-[70%] m-auto overflow-hidden px-8"><!--container-->
+      <!-- Tab Content 1 -->
+      <div id="tab-1-content" class="tab-content-item show hidden opacity-0">
+        <div class="grid grid-cols-[repeat(2,1fr)] gap-8 items-center justify-center">
+          <div>
+            <p class="text-[1.8rem] mb-4">
+              If you decide Netflix isn't for you - no problem. No commitment.
+              Cancel online anytime.
+            </p>
+            <a href="#" class="mr-2 inline-block uppercase bg-[#e50914] rounded-sm shadow-sm text-center
+            text-white py-[0.8rem] px-[1.3rem] text-[1rem] hover:opacity-80  hover:duration-200">Watch Free For 30 Days</a>
+          </div>
+          <img src="https://i.ibb.co/J2xDJV7/tab-content-1.png" alt="" class="w-full"/>
+        </div>
+      </div>
+
+      <!-- Tab Content 2 -->
+      <div id="tab-2-content" class="tab-content-item hidden opacity-0">
+        <div class="grid grid-cols-[2fr_1fr] gap-4 items-center justify-center">
+          <p class="text-[1.8rem] mb-4">
+            Watch TV shows and movies anytime, anywhere <br>  personalized for
+            you.
+          </p>
+          <a href="#" class="mr-2 inline-block uppercase bg-[#e50914] rounded-sm shadow-sm text-center
+          text-white py-[0.8rem] px-[1.3rem] text-[1rem] hover:opacity-80  hover:duration-200 mb-8">Watch Free For 30 Days</a>
+        </div>
+        <div class="mt-8 grid grid-cols-[repeat(3,1fr)] gap-8 items-center justify-center text-center">
+          <div class="">
+            <img src="https://i.ibb.co/DpdN7Gn/tab-content-2-1.png" alt="" class="w-full"/>
+            <p class="text-[1.2rem] mb-4">
+              Watch on your TV
+            </p>
+            <p class="text-[#999]">
+              Smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray
+              players and more.
+            </p>
+          </div>
+          <div >
+            <img src="https://i.ibb.co/R3r1SPX/tab-content-2-2.png" alt="" class="w-full"/>
+            <p class="text-[1.2rem] mb-4">
+              Watch instantly or download for later
+            </p>
+            <p class="text-[#999]">
+              Available on phone and tablet, wherever you go.
+            </p>
+          </div>
+          <div >
+            <img src="https://i.ibb.co/gDhnwWn/tab-content-2-3.png" alt="" class="w-full"/>
+            <p class="text-[1.2rem] mb-4">
+              Use any computer
+            </p>
+            <p class="text-[#999]">
+              Watch right on Netflix.com.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab Content 3 -->
+      <div id="tab-3-content" class="tab-content-item hidden opacity-0">
+        <div class="text-center">
+          <p class="text-[1.8rem] mb-4">
+            Choose one plan and watch everything on Netflix.
+          </p>
+          <a href="#" class="mr-2 inline-block uppercase bg-[#e50914] rounded-sm shadow-sm text-center
+          text-white py-[0.8rem] px-[1.3rem] text-[1rem] hover:opacity-80  hover:duration-200">Watch Free For 30 Days</a>
+        </div>
+
+        <table class="w-full mt-8 border-collapse border-spacing-0">
+          <thead>
+            <tr class="uppercase">
+              <th class="p-3"></th>
+              <th class="p-3">Basic</th>
+              <th class="p-3">Standard</th>
+              <th class="p-3">Premium</th>
+            </tr>
+          </thead>
+          <tbody class="table-row-group align-middle border-inherit text-[#999] text-center">
+            <tr class="odd:bg-[#222]">
+              <td class="p-4 text-left">Monthly price after free month ends on 6/19/19</td>
+              <td class="p-4">$8.99</td>
+              <td class="p-4">$12.99</td>
+              <td class="p-4">$15.99</td>
+            </tr>
+            <tr class="odd:bg-[#222]">
+              <td class="p-4 text-left">HD Available</td>
+              <td class="p-4"><i class="fas fa-times"></i></td>
+              <td class="p-4"><i class="fas fa-check"></i></td>
+              <td class="p-4"><i class="fas fa-check"></i></td>
+            </tr>
+            <tr class="odd:bg-[#222]">
+              <td class="p-4 text-left">Ultra HD Available</td>
+              <td class="p-4"><i class="fas fa-times"></i></td>
+              <td class="p-4"><i class="fas fa-times"></i></td>
+              <td class="p-4"><i class="fas fa-check"></i></td>
+            </tr>
+            <tr class="odd:bg-[#222]">
+              <td class="p-4 text-left">Screens you can watch on at the same time</td>
+              <td class="p-4">1</td>
+              <td class="p-4">2</td>
+              <td class="p-4">4</td>
+            </tr>
+            <tr class="odd:bg-[#222]">
+              <td class="p-4 text-left">Watch on your laptop, TV, phone and tablet</td>
+              <td class="p-4"><i class="fas fa-check"></i></td>
+              <td class="p-4"><i class="fas fa-check"></i></td>
+              <td class="p-4"><i class="fas fa-check"></i></td>
+            </tr>
+            <tr class="odd:bg-[#222]">
+              <td class="p-4 text-left">Unlimited movies and TV shows</td>
+              <td class="p-4"><i class="fas fa-check"></i></td>
+              <td class="p-4"><i class="fas fa-check"></i></td>
+              <td class="p-4"><i class="fas fa-check"></i></td>
+            </tr>
+            <tr class="odd:bg-[#222]">
+              <td class="p-4 text-left">Cancel anytime</td>
+              <td class="p-4"><i class="fas fa-check"></i></td>
+              <td class="p-4"><i class="fas fa-check"></i></td>
+              <td class="p-4"><i class="fas fa-check"></i></td>
+            </tr>
+            <tr class="odd:bg-[#222]">
+              <td class="p-4 text-left">First month free</td>
+              <td class="p-4"><i class="fas fa-check"></i></td>
+              <td class="p-4"><i class="fas fa-check"></i></td>
+              <td class="p-4"><i class="fas fa-check"></i></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <footer class="max-w-[70%] my-4 mx-auto overflow-auto text-[#999] text-[0.9rem]"> <!--푸터 s-->
+    <p class="mb-6">Questions? Call 1-866-579-7172</p>
+    <div class="grid grid-cols-[repeat(4,1fr)] gap-8 leading-[1.9rem]">
+      <ul class="">
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Investor Relations</a></li>
+        <li><a href="#">Ways To Watch</a></li>
+        <li><a href="#">Corporate Information</a></li>
+        <li><a href="#">Netflix Originals</a></li>
+      </ul>
+      <ul>
+        <li><a href="#">Help Center</a></li>
+        <li><a href="#">Jobs</a></li>
+        <li><a href="#">Terms Of Use</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+      <ul>
+        <li><a href="#">Account</a></li>
+        <li><a href="#">Redeem Gift Cards</a></li>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Speed Test</a></li>
+      </ul>
+      <ul>
+        <li><a href="#">Media Center</a></li>
+        <li><a href="#">Buy Gift Cards</a></li>
+        <li><a href="#">Cookie Preferences</a></li>
+        <li><a href="#">Legal Notices</a></li>
+      </ul>
+    </div>
+
+  </footer> <!--푸터 e-->
+
+  <script src="./index.js"></script>
+</body>
+
+</html>

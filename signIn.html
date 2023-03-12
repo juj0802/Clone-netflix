@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" class="box-border m-0 p-0 bg-[#141414]">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-In</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/95b264af2d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="text-[#999] m-0">
+    
+
+        <div id="wrapper" class="h-full w-full m-0 relative"><!--전체 영역 감싸는 wrapper-->
+        <div id="bg" class="block absolute overflow-hidden h-full w-full z-[-1] bg-cover"><!--백그라운드 이미지 영역-->
+            <img src="./img/signIn-bg.jpg" alt="백그라운드이미지" class="min-h-full min-w-full ">
+        </div>
+        
+        <header class="absolute w-full h-[90px] z-10 left-0 top-0"><!--헤더 s-->
+        <a href="index.html" class="inline-block vertical-middle ml-[3%] mt-[1%]"> <img class="h-12 w-54" src="./img/logo.png" alt=""> </a>
+        </header><!--헤더 e-->
+
+        <section class="mt-0 mx-auto mb-[-236px] max-w-[650px] min-h-screen text-[#333] text-base py-0 px-[5%] z-10"><!--섹션s-->
+            <div class="flex flex-col m-0 w-full min-h-[660px] pt-[60px] px-[68px] pb-[40px] bg-[rgba(0,0,0,0.75)] rounded mb-[90px]"> <!--로그인 영역 s-->
+                <h1 class="font-bold text-4xl text-white mb-7">Sign In</h1>
+                <form action="#" class="mb-0 block">
+                    <div class="relative"> 
+                        <input type="text" id="email" placeholder="Email or phone number" class="bg-[#333] border-0 rounded text-white h-12  py-4 px-5 w-full  ">
+                        <label for="email" class="absolute text-[#8c8c8c] text-[16px] left-[20px] top-1/2 translate-y-[-50%] ease-in-out duration-100"> Email or phone number </label>
+                    
+                </div>
+                <div class="relative mt-4 ">
+                    <input type="password" id="password" placeholder="Password" class="bg-[#333] border-0 rounded text-white h-12  py-4 px-5 w-full">  
+                    <label for="password" class="absolute text-[#8c8c8c] text-[16px] left-[20px] top-1/2 translate-y-[-50%] ease-in-out duration-100"> Password </label>
+                 
+                </div>
+                  <button type="submit" class="rounded font-medium mt-7 mx-0 mb-4 w-full bg-[#e50914] py-2 px-4 text-white">Sign In</button>
+
+                  <div class="flex justify-between text-[#b3b3b3] text-[13px] font-normal">
+                    <div class="relative grow pl-[20px] inline-block mb-[-5px]">
+                    <input type="checkbox" id="remember" class="absolute left-0 top-0 mr-2 opacity-0  ">
+                    <label for="remember" id="remember-me" class="relative block p-0 "><span>Remember me</span></label>
+                    </div>
+                    <a href="#">Need help?</a>
+                  </div>
+
+                </form>
+                <div class="block text-[#737373] text-[16px] font-normal mt-16">
+                    New to Netflix? <a href="#" class="text-white">Sign up now</a>
+                </div>
+                <div class="mt-3 text-[13px] text-[#8c8c8c] text-left block"> 
+                    This page is protected by Google reCAPTCHA to ensure you're not a bot. <a href="#" class="text-[#0071eb]"> Learn more.</a>
+                </div>
+            </div> <!--로그인 영역 e-->
+        </section><!--섹션 e-->
+        <footer class="bg-[rgba(0,0,0,0.75)] mt-0 mx-auto text-[#757575] text-[1rem] min-w-[190px] pb-[20px] relative w-full block"> <!--푸터 s-->
+            <div class="my-0 mx-auto max-w-[1000px] py-[30px] w-[100%]">
+                <p class="mb-[30px] p-0">Questions? Call <a class="" href="#">080-001-9588</a></p>
+
+                <ul class="m-0 p-0 box-border text-[13px] max-w-[1000px] grid grid-cols-4">
+                
+                    <li class="ml-0 inline-block mb-[16px] min-w-[100px] pt-[12px] align-top "> <a class="footer-link" href="#"><span>FAQ</span></a> </li>
+                    <li class="ml-0 inline-block mb-[16px] min-w-[100px] pt-[12px] align-top "> <a class="footer-link" href="#"><span>Help Center</span></a> </li>
+                    <li class="ml-0 inline-block mb-[16px] min-w-[100px] pt-[12px] align-top "> <a class="footer-link" href="#"><span>Terms of Use</span></a> </li>
+                    <li class="ml-0 inline-block mb-[16px] min-w-[100px] pt-[12px] align-top "> <a class="footer-link" href="#"><span>Privacy Statement</span></a> </li>
+                    <li class="ml-0 inline-block mb-[16px] min-w-[100px] pt-[12px] align-top "> <a class="footer-link" href="#"><span>Cookie Preferences</span></a> </li>
+                    <li class="ml-0 inline-block mb-[16px] min-w-[100px] pt-[12px] align-top "> <a class="footer-link" href="#"><span>Corporate Information</span></a> </li>
+
+                </ul>
+                <div class="mt-5 ">
+
+                    <label for="language" id="select-language" class="relative"></label>
+                    <select name="language" id="language" class="pr-9 pl-11 py-3 leading-7 bg-black border border-[#333] appearance-none"> 
+                        <option value="English">English</option>
+                        <option value="한국어">한국어</option>
+                    </select>
+                </div>
+
+                <div class="text-[#808080] text-xs my-5 mx-0">
+                    <div>
+                    Netflix Services Korea Ltd. E-Commerce Registration Number: Je 2018-Seoul Jong-ro-0426 Ho. Phone: 080-001-9588
+                    </div>
+                    <div>
+                    Representative: Reginald Shawn Thompson
+                   </div>
+                    Email: korea@netflix.co
+                    <div>
+                    Address: 20F, Tower A, Centropolis Building 26, Ujeongguk-ro, Jongno-gu, Seoul, 03161 Republic of Korea
+                    </div>
+                    <div>
+                    Business registration number: 165-87-00119
+                    </div>
+                    <div>
+                    Hosted by: Amazon Web Services Inc.
+                    </div>
+                    KFTC website
+                </div>
+
+            </div>
+        </footer> <!--푸터 e-->
+        </div>
+
+
+</body>
+</html>
